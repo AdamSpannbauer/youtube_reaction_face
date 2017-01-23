@@ -1,5 +1,7 @@
 # youtube Reaction Face Finder
 
+<img src="https://github.com/AdamSpannbauer/youtube_reaction_face/pics/pres_header.png" height="50">
+
 Quick side project to extract top examples of different facial expressions from a youtube video.  Project work was done during 'Innovation Week' at Eastman Chemical Company.  Code was not written with any high production standards (due to short timeline of project).  Code uses Microsoft Emotion API and relies on a file named api_keys containing your emotion api keys; formatting for this file can be seen in `example_api_keys`.
 
 Idea for project was to be able to extract reaction faces from a video for use in a chat or for whatever reason the user/memer wants.
