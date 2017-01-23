@@ -1,4 +1,4 @@
-# youtube Reaction Face Finder
+# YouTube Reaction Face Finder
 
 <p align="center"><img src="https://github.com/AdamSpannbauer/youtube_reaction_face/blob/master/pics/pres_header.png" height="125"/></p>
 
