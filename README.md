@@ -11,29 +11,23 @@ The code requires `opencv` & `keras` (model trained with TensorFlow backend).
 Output from video: [Donald Trump funny faces at the CNN GOP Debate](https://www.youtube.com/watch?v=tVb0g0-JCfk).
 
 <table width="500" border="0" cellpadding="5">
-
-<tr>
-
-<td align="center" valign="center">
-<img src="output/angry.jpg" height=100 />
-<br />
-Angry
-</td>
-
-<td align="center" valign="center">
-<img src="output/neutral.jpg" height=100 />
-<br />
-Neutral
-</td>
-
-<td align="center" valign="center">
-<img src="output/happy.jpg" height=100 />
-<br />
-Happy
-</td>
-
-</tr>
-
+    <tr>
+        <td align="center" valign="center">
+            <img src="output/angry.jpg" height=100 />
+            <br />
+            Angry
+        </td>
+        <td align="center" valign="center">
+            <img src="output/neutral.jpg" height=100 />
+            <br />
+            Neutral
+        </td>
+        <td align="center" valign="center">
+            <img src="output/happy.jpg" height=100 />
+            <br />
+            Happy
+        </td>
+    </tr>
 </table>
 
 ## Usage
@@ -52,6 +46,6 @@ Happy
     -m MAXFRAMES, --maxFrames MAXFRAMES
                         stop processing video frames after this many (default 5000)
                         
-#### Example command (run in repo dir)
+#### Example Command (run in repo dir)
 
 `python youtube_react_face.py --youtubeURL https://www.youtube.com/watch?v=tVb0g0-JCfk --output output`
