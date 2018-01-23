@@ -15,17 +15,17 @@ Output from video: [Donald Trump funny faces at the CNN GOP Debate](https://www.
 <table width="500" border="0" cellpadding="5">
     <tr>
         <td align="center" valign="center">
-            <img src="output/angry.jpg" height=100 />
+            <img src="readme/angry.jpg" height=100 />
             <br />
             Angry
         </td>
         <td align="center" valign="center">
-            <img src="output/neutral.jpg" height=100 />
+            <img src="readme/neutral.jpg" height=100 />
             <br />
             Neutral
         </td>
         <td align="center" valign="center">
-            <img src="output/happy.jpg" height=100 />
+            <img src="readme/happy.jpg" height=100 />
             <br />
             Happy
         </td>
