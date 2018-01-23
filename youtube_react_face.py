@@ -13,12 +13,12 @@ from progress.bar import IncrementalBar
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
-ap.add_argument("-y", "--youtubeURL",
+ap.add_argument("-y", "--youtubeURL", required=True,
 	help="url for youtube video to find reaction faces in")
-ap.add_argument("-o", "--output",
+ap.add_argument("-o", "--output", required=True,
 	help="dir to output reactions to")
 ap.add_argument("-m", "--maxFrames", default=5000, type=int,
-	help="stop processing video frames after this many")
+	help="stop processing video frames after this many (default 5000)")
 args = vars(ap.parse_args())
 
 # load the face detector cascade, emotion detection CNN, then define
