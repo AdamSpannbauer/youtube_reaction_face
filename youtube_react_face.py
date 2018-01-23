@@ -8,7 +8,8 @@ import numpy as np
 import argparse
 import imutils
 import cv2
-import fetch_yt
+import utils
+from progress.bar import IncrementalBar
 
 # construct the argument parse and parse the arguments
 ap = argparse.ArgumentParser()
@@ -35,35 +36,40 @@ react_vals = {"angry": 0.5,
 			  "neutral": 0.5}
 
 #download youtube video
-video_path = fetch_yt.yt_to_mp4(args['youtubeURL'])
+video_path = utils.yt_to_mp4(args['youtubeURL'])
 
-print(video_path)
 #start vid cap
 camera = cv2.VideoCapture(video_path)
+# get vid frame count
+vid_frame_count = int(camera.get(cv2.CAP_PROP_FRAME_COUNT))
 
+#set max frames
 if args['maxFrames'] > 0:
-	max_frames = args['maxFrames']
+	max_frames = min(args['maxFrames'], vid_frame_count)
 else:
-	max_frames = float('inf')
+	max_frames = vid_frame_count
 
+
+bar = IncrementalBar('Processing', max=max_frames-1)
 counter = 0
 # keep looping
 while True:
 	counter += 1
 	if counter > max_frames:
 		break
+	bar.next()
 	# grab the current frame
 	(grabbed, frame) = camera.read()
 
 	# if we are viewing a video and we did not grab a
 	# frame, then we have reached the end of the video
-	if args.get("video") and not grabbed:
+	if not grabbed:
 		break
 
 	# resize the frame and convert it to grayscale
 	frame = imutils.resize(frame, width=300)
-	cv2.imshow('frame', frame)
-	cv2.waitKey(5)
+	# cv2.imshow('frame', frame)
+	# cv2.waitKey(5)
 	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
 	# detect faces in the input frame, then clone the frame so that
@@ -101,3 +107,6 @@ while True:
 				react_vals[label] = max_pred
 				out_file = "{out}/{lab}.jpg".format(out=args['output'],lab= label, pred= max_pred, prec=2)
 				cv2.imwrite(out_file, frame[fY:fY + fH, fX:fX + fW])
+
+bar.finish()
+
