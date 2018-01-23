@@ -2,7 +2,9 @@
 
 <p align="center"><img src="readme/pres_header.png" height="125"/></p>
 
-This repo has code to extract 'reaction' faces from a given YouTube video.  Huge thanks to [Adrian](https://twitter.com/PyImageSearch) at [PyImageSearch](https://www.pyimagesearch.com/) for his book, [Deep Learning for Computer Vision with Python](https://www.pyimagesearch.com/deep-learning-computer-vision-python-book/).  Adrian and the book gave me all the tools needed for building the emotion model.
+This repo has code to extract 'reaction' faces from a given YouTube video.  
+
+Huge thanks to [Adrian](https://twitter.com/PyImageSearch) at [PyImageSearch](https://www.pyimagesearch.com/) for his book, [Deep Learning for Computer Vision with Python](https://www.pyimagesearch.com/deep-learning-computer-vision-python-book/).  Adrian and the book gave me all the tools needed for building the emotion model.
 
 The code requires `opencv` & `keras` (model trained with TensorFlow backend).
 
@@ -32,7 +34,7 @@ Output from video: [Donald Trump funny faces at the CNN GOP Debate](https://www.
 
 ## Usage
 
-`youtube_react_face.py -y YOUTUBEURL -o OUTPUT [-m MAXFRAMES]`
+`python youtube_react_face.py -y YOUTUBEURL -o OUTPUT [-m MAXFRAMES]`
 
 #### Required Arguments:
 
