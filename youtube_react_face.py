@@ -45,12 +45,12 @@ vid_frame_count = int(camera.get(cv2.CAP_PROP_FRAME_COUNT))
 
 #set max frames
 if args['maxFrames'] > 0:
-	max_frames = min(args['maxFrames'], vid_frame_count)
+	max_frames = min(args['maxFrames'], vid_frame_count-1)
 else:
-	max_frames = vid_frame_count
+	max_frames = vid_frame_count-1
 
 
-bar = IncrementalBar('Processing', max=max_frames-1)
+bar = IncrementalBar('Processing', max=max_frames)
 counter = 0
 # keep looping
 while True:
